@@ -1,8 +1,10 @@
-// 'use strict';
+'use strict';
 import React, { Component } from 'react';
 // import React from 'react';
+import AndroidToast from './AndroidToast'
 import {
-    AppRegistry,
+  AppRegistry,
+  TouchableHighlight,
 	StyleSheet,
 	Text,
   View
@@ -11,12 +13,17 @@ import {
 // class HelloWorld extends React.Component {
 class HelloWorld extends Component{
     render() {
-	return (
+    // AndroidToast.showMsg('Toast from RN', AndroidToast.SHORT);
+	  return (
 		<View style={styles.container}>
 		<Text style={styles.hello}>Hello, World</Text>
-      </View>
-		)
-	    }
+    <TouchableHighlight onPress = {() => {
+      AndroidToast.showMsg('Toast from RN',AndroidToast.SHORT);
+    }}>
+       <Text style = {styles.hello}>Touch it </Text>
+    </TouchableHighlight>
+    </View>
+		)}
 }
 var styles = StyleSheet.create({
 	container: {
