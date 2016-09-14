@@ -1,7 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
-// import React from 'react';
-import AndroidToast from './AndroidToast'
+
 import {
   AppRegistry,
   TouchableHighlight,
@@ -10,10 +9,10 @@ import {
   View
 	} from 'react-native';
 
-// class HelloWorld extends React.Component {
+import AndroidToast from './AndroidToast';
+
 class HelloWorld extends Component{
     render() {
-    // AndroidToast.showMsg('Toast from RN', AndroidToast.SHORT);
 	  return (
 		<View style={styles.container}>
 		<Text style={styles.hello}>Hello, World</Text>

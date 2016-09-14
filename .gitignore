@@ -2,3 +2,4 @@
 **/*.idea
 StudyDemo/gradle*
 node_modules
+npm-debug.log

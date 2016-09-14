@@ -10,6 +10,7 @@ import com.facebook.react.ReactRootView;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
 import com.swx.studydemo.BuildConfig;
+import com.swx.studydemo.rnmodule.ToastReactPackage;
 
 /**
  * Created by swx on 9/13/16.
@@ -28,6 +29,7 @@ public class MyReactActivity extends Activity implements DefaultHardwareBackBtnH
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
                 .addPackage(new MainReactPackage())
+                .addPackage(new ToastReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
